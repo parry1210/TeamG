@@ -1,6 +1,6 @@
-13:16:12 **** Incremental Build of configuration Default for project MyProject ****
+13:50:39 **** Incremental Build of configuration Default for project MyProject ****
 make all 
 make: Nothing to be done for 'all'.
 
-13:16:12 Build Finished. 0 errors, 0 warnings. (took 818ms)
+13:50:40 Build Finished. 0 errors, 0 warnings. (took 809ms)
 

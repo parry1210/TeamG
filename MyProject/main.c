@@ -15,12 +15,15 @@ int main(void)
     halInit();
     chSysInit();
     mpu_init();
+    int motor_speed = 500;
 
 
     /* Infinite loop. */
     while (1) {
     	//waits 1 second
-        chThdSleepMilliseconds(1000);
+        chThdSleepMilliseconds(100);
+        left_motor_set_speed(motor_speed);
+        right_motor_set_speed(-motor_speed);
     }
 }
 

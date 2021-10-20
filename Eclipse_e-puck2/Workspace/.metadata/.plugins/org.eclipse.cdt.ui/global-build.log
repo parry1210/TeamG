@@ -329,3 +329,67 @@ make: Nothing to be done for 'all'.
 13:16:12 **** Incremental Build of configuration Default for project MyProject ****
 make all 
 make: Nothing to be done for 'all'.
+13:45:00 **** Build of configuration Default for project MyProject ****
+make all 
+[1;34mCompiling main.c[0m
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  47908	   2948	   6236	  57092	   df04	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+13:45:04 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+make: Nothing to be done for 'all'.
+13:48:56 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:22:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'while'
+     while (1) {
+     ^~~~~
+main.c:25:9: warning: implicit declaration of function 'left_motor_set_speed' [-Wimplicit-function-declaration]
+         left_motor_set_speed(500);
+         ^~~~~~~~~~~~~~~~~~~~
+main.c:26:9: warning: implicit declaration of function 'right_motor_set_speed' [-Wimplicit-function-declaration]
+         right_motor_set_speed(-500);
+         ^~~~~~~~~~~~~~~~~~~~~
+../e-puck2_main-processor/ChibiOS//os/common/ports/ARMCMx/compilers/GCC/rules.mk:216: recipe for target 'build/obj/main.o' failed
+make: *** [build/obj/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:49:27 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'main':
+main.c:25:9: warning: implicit declaration of function 'left_motor_set_speed' [-Wimplicit-function-declaration]
+         left_motor_set_speed(motor_speed);
+         ^~~~~~~~~~~~~~~~~~~~
+main.c:26:9: warning: implicit declaration of function 'right_motor_set_speed' [-Wimplicit-function-declaration]
+         right_motor_set_speed(-motor_speed);
+         ^~~~~~~~~~~~~~~~~~~~~
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  48548	   2948	   6300	  57796	   e1c4	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+13:49:41 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+make: Nothing to be done for 'all'.
+13:50:17 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+make: Nothing to be done for 'all'.
+13:50:35 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+make: Nothing to be done for 'all'.
+13:50:39 **** Incremental Build of configuration Default for project MyProject ****
+make all 
+make: Nothing to be done for 'all'.
