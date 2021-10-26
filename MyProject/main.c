@@ -8,6 +8,14 @@
 #include "memory_protection.h"
 #include <main.h>
 
+#include "motors.h"
+
+#include "sensors/proximity.h"
+
+messagebus_t bus;
+MUTEX_DECL(bus_lock);
+CONDVAR_DECL(bus_condvar);
+
 
 int main(void)
 {
@@ -15,15 +23,25 @@ int main(void)
     halInit();
     chSysInit();
     mpu_init();
-    int motor_speed = 500;
+    
+    messagebus_init(&bus,&bus_lock,&bus_condvar);
+    
+    motors_init();
+    
+    proximity_start();
+    calibrate_ir();
 
 
     /* Infinite loop. */
     while (1) {
     	//waits 1 second
         chThdSleepMilliseconds(100);
-        left_motor_set_speed(motor_speed);
-        right_motor_set_speed(-motor_speed);
+        
+        left_motor_set_speed(500);
+        right_motor_set_speed(500);
+        
+        if
+        get_prox(0);
     }
 }
 
