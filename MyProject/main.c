@@ -40,8 +40,22 @@ int main(void)
         left_motor_set_speed(500);
         right_motor_set_speed(500);
         
-        if
-        get_prox(0);
+        for(int i=0;i<8;i++){
+            prox_values[i]=get_prox(i);
+        }
+        
+        if(prox_values[0]==106||prox_values[1]==151||prox_values[2]==2147){
+            chThdSleepMilliseconds(100);
+            left_motor_set_speed(300);
+            right_motor_set_speed(-300);
+        else if(prox_values[7]==330||prox_values[6]==3658||prox_values[5]==59){
+            chThdSleepMilliseconds(100);
+            left_motor_set_speed(-300);
+            right_motor_set_speed(300);
+        else if(prox_values[3]==1||prox_values[4]==1{
+            chThdSleepMilliseconds(100);
+            left_motor_set_speed(500);
+            right_motor_set_speed(500);
     }
 }
 
