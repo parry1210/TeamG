@@ -25,7 +25,7 @@ CONDVAR_DECL(bus_condvar);
 
 int main(void)
 {
-	    halInit();
+	        halInit();
 		chSysInit();
 		mpu_init();
 		messagebus_init(&bus,&bus_lock,&bus_condvar);//proximity
@@ -58,7 +58,7 @@ int main(void)
 	    	}
 
 	    	if (prox_values[0]>50&&prox_values[7]>50){
-	    		bool turn_left=(prox_values[1]+prox_values[2])>(prox_values[6]+prox_values[5]);
+	            bool turn_left=(prox_values[1]+prox_values[2])>(prox_values[6]+prox_values[5]);
 	    	    bool turn_right=(prox_values[1]+prox_values[2])<(prox_values[6]+prox_values[5]);
 	    	    if(turn_left){
 	    	    	left_motor_set_speed(-1000);
